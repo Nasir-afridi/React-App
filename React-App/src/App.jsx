@@ -1,6 +1,6 @@
 const Name = ({ actors }) => {
   return (
-    <div>
+    <div className="data">
       
         {actors.map((data, index) => {
           return <h1 key={index}>{data.Name}- {data.age}</h1>
@@ -13,7 +13,7 @@ const Name = ({ actors }) => {
 const App = () => {
   return (
     <div>
-      <h1>hello</h1>
+      <h1 className="hello">hello</h1>
       <Name actors={[{ Name: "Tom cruise", age:100 }]} />
       <Name actors={[{ Name: "Rock", age:1000 }]} />
     </div>
