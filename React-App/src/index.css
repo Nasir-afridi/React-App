@@ -33,3 +33,13 @@ body{
   font-size: 30px;
 
 }
+
+.like-btn {
+  border: none;
+  font-size: 30px;
+  background-color: transparent;
+  width: 100%;
+  text-align: right;
+  cursor: pointer;
+  
+}
