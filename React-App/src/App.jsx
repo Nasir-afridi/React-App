@@ -1,14 +1,23 @@
-const Name = () => {
-  return <div><h1>hello ggggg</h1></div>
-}
+const Name = ({ actors }) => {
+  return (
+    <div>
+      
+        {actors.map((data, index) => {
+          return <h1 key={index}>{data.Name}- {data.age}</h1>
+        })}
+      
+    </div>
+  );
+};
 
 const App = () => {
-  return <div>
-    <h1>hello</h1>
-    <Name />
-  </div>
-}
+  return (
+    <div>
+      <h1>hello</h1>
+      <Name actors={[{ Name: "Tom cruise", age:100 }]} />
+      <Name actors={[{ Name: "Rock", age:1000 }]} />
+    </div>
+  );
+};
 
-
-
-export default App
+export default App;
