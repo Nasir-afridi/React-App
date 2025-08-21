@@ -1,11 +1,13 @@
-const Name = ({ actors }) => {
+import { useState } from "react";
+
+const Name = ({ title }) => {
+  const [hasLiked, setHasLiked] = useState(false);
   return (
     <div className="data">
-      
-        {actors.map((data, index) => {
-          return <h1 key={index}>{data.Name}- {data.age}</h1>
-        })}
-      
+        <h2>{title}</h2>
+        <button className="like-btn" onClick={() => {setHasLiked(!hasLiked)}}>
+          {hasLiked?'Liked':'Like'}
+        </button>
     </div>
   );
 };
@@ -13,9 +15,9 @@ const Name = ({ actors }) => {
 const App = () => {
   return (
     <div>
-      <h1 className="hello">hello</h1>
-      <Name actors={[{ Name: "Tom cruise", age:100 }]} />
-      <Name actors={[{ Name: "Rock", age:1000 }]} />
+      <Name  title="The lion king"/>
+      <Name  title="f&furious"/>
+      <Name  title="f&furious7"/>
     </div>
   );
 };
