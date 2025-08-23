@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Hooks from "./Hooks/Hooks";
 
 const Name = ({ title }) => {
   const [hasLiked, setHasLiked] = useState(false);
@@ -18,6 +19,9 @@ const App = () => {
       <Name  title="The lion king"/>
       <Name  title="f&furious"/>
       <Name  title="f&furious7"/>
+
+
+      <Hooks></Hooks>
     </div>
   );
 };
